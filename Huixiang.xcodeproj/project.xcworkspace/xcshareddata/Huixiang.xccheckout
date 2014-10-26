@@ -10,31 +10,31 @@
 	<string>Huixiang</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2142D10E-8289-47CB-A3E3-19B1B0C11C8D</key>
-		<string>https://github.com/yucong/Huixiang.git</string>
+		<key>B85878F1DE222F876BEBDDF166C896C03DC34093</key>
+		<string>github.com:supersheep/huixiang-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Huixiang.xcodeproj/project.xcworkspace</string>
+	<string>Huixiang.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2142D10E-8289-47CB-A3E3-19B1B0C11C8D</key>
+		<key>B85878F1DE222F876BEBDDF166C896C03DC34093</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/yucong/Huixiang.git</string>
+	<string>github.com:supersheep/huixiang-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2142D10E-8289-47CB-A3E3-19B1B0C11C8D</string>
+	<string>B85878F1DE222F876BEBDDF166C896C03DC34093</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2142D10E-8289-47CB-A3E3-19B1B0C11C8D</string>
+			<string>B85878F1DE222F876BEBDDF166C896C03DC34093</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Huixiang</string>
+			<string>huixiang-ios</string>
 		</dict>
 	</array>
 </dict>

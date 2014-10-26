@@ -82,6 +82,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2252D71F19FCE4FB00E080E6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FA231B3617D064F700B9C5C8 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		FA231B3717D064F700B9C5C8 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		FA25E607178A831B00423752 /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaf.png; sourceTree = "<group>"; };
@@ -412,6 +413,7 @@
 				FA7F42E317840E0000AD26CB /* SettingsViewController.m */,
 				FA51334E1782B1B00072FC1A /* iCarousel */,
 				FAE9B0D017698F92007BC364 /* Supporting Files */,
+				2252D71F19FCE4FB00E080E6 /* Constants.h */,
 			);
 			path = Huixiang;
 			sourceTree = "<group>";
@@ -590,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -613,6 +616,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCTION = 1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -621,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -637,6 +642,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCTION = 1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -653,8 +659,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/Huixiang\\\"",
-					"/Users/ltebean/Desktop/ios\\ workspace/Huixiang/Huixiang",
+					"$(SRCROOT)/Huixiang",
 				);
 				PRODUCT_NAME = "茴香";
 				PROVISIONING_PROFILE = "";
@@ -674,8 +679,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/Huixiang\\\"",
-					"/Users/ltebean/Desktop/ios\\ workspace/Huixiang/Huixiang",
+					"$(SRCROOT)/Huixiang",
 				);
 				PRODUCT_NAME = "茴香";
 				PROVISIONING_PROFILE = "";
