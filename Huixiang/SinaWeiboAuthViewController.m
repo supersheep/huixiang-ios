@@ -19,7 +19,7 @@
 @synthesize webView=_webView;
 
 - (IBAction)cancel:(id)sender {
-    [self.presentingViewController dismissModalViewControllerAnimated:YES];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -82,8 +82,8 @@
         [WeiboHTTP sendRequestToPath:@"/friendships/create.json" method:@"POST" params:@{@"access_token":[Settings getUser][@"weibo_access_token"],@"uid":@"3665493632"} completionHandler:^(id data) {
         }];
     }
-    [self dismissModalViewControllerAnimated:YES];
-
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)getUserInfoWithToken:(NSString *)access_token uid:(NSString *)uid
@@ -100,7 +100,7 @@
             UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"关注茴香官方微博" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"稍后",@"OK", nil];
             [alert show];
         }else{
-            [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"used"];
         

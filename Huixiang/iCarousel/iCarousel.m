@@ -474,6 +474,7 @@ CVReturn displayLinkCallback(CVDisplayLinkRef displayLink,
 			else if ([delegate respondsToSelector:@selector(carousel:transformForItemView:withOffset:)])
 			{
 				NSLog(@"Delegate method carousel:transformForItemView:withOffset: is deprecated, use carousel:transformForItemAtIndex:withOffset:baseTransform: instead.");
+                
 				return [delegate carousel:self transformForItemView:view withOffset:offset];
 			}
 			
@@ -1016,7 +1017,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 		else if ([dataSource respondsToSelector:@selector(carousel:placeholderViewAtIndex:)])
 		{
 			NSLog(@"DataSource method carousel:placeholderViewAtIndex: is deprecated, use carousel:placeholderViewAtIndex:reusingView: instead.");
-        	view = [dataSource carousel:self placeholderViewAtIndex:(int)ceilf((CGFloat)numberOfPlaceholdersToShow/2.0f) + index];
+            view = [dataSource carousel:self placeholderViewAtIndex:(int) ceilf((CGFloat)numberOfPlaceholdersToShow/2.0f) + index reusingView:nil];
 		}
     }
     else if (index >= numberOfItems)
@@ -1030,7 +1031,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 		else if ([dataSource respondsToSelector:@selector(carousel:placeholderViewAtIndex:)])
 		{
 			NSLog(@"DataSource method carousel:placeholderViewAtIndex: is deprecated, use carousel:placeholderViewAtIndex:reusingView: instead.");
-        	view = [dataSource carousel:self placeholderViewAtIndex:numberOfPlaceholdersToShow/2.0f + index - numberOfItems];
+        	view = [dataSource carousel:self placeholderViewAtIndex:numberOfPlaceholdersToShow/2.0f + index - numberOfItems reusingView:nil];
 		}
     }
     else if ([dataSource respondsToSelector:@selector(carousel:viewForItemAtIndex:reusingView:)])
@@ -1042,7 +1043,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 	else
     {
 		NSLog(@"DataSource method carousel:viewForItemAtIndex: is deprecated, use carousel:viewForItemAtIndex:reusingView: instead.");
-        view = [dataSource carousel:self viewForItemAtIndex:index];
+        view = [dataSource carousel:self viewForItemAtIndex:index reusingView:nil];
     }
     
     if (view == nil)

@@ -41,7 +41,7 @@
         self.refreshing = NO;
         
         self.textLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)] autorelease];
-        self.textLabel.textAlignment = UITextAlignmentCenter;
+        self.textLabel.textAlignment = NSTextAlignmentCenter;
         self.textLabel.text =  @"上拉加载更多...";
         self.textLabel.textColor = TEXT_COLOR;
         self.textLabel.font=[UIFont systemFontOfSize:15];
@@ -58,7 +58,7 @@
 }
 
 - (void) setTextAlignment:(UITextAlignment)textAlignment {
-    self.textLabel.textAlignment = textAlignment;
+    self.textLabel.textAlignment = (NSTextAlignment) textAlignment;
 }
 
 - (UITextAlignment) textAlignment {

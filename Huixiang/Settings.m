@@ -13,6 +13,10 @@
 
 +(NSDictionary*) getUser
 {
+    
+//    NSDictionary* u = @{@"id":@"1", @"client_hash":@""};
+//    [Settings saveUser:u];
+    
     NSDictionary* user= [[NSUserDefaults standardUserDefaults]objectForKey:@"user"];
     return user;
 }
