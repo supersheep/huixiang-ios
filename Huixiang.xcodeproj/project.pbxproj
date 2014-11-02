@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224510DB1A00805300461F11 /* AddPieceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224510DA1A00805300461F11 /* AddPieceController.m */; };
+		2267EE141A06081E00DF761C /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */; };
 		FA231B3817D064F700B9C5C8 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA231B3717D064F700B9C5C8 /* UIView+Genie.m */; };
 		FA231B3917D06AA400B9C5C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9B0E517698F92007BC364 /* ViewController.m */; };
 		FA25E609178A831B00423752 /* leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25E607178A831B00423752 /* leaf.png */; };
@@ -65,8 +67,6 @@
 		FA7F42F0178413F900AD26CB /* fav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42EE178413F900AD26CB /* fav@2x.png */; };
 		FA7F42F3178414D500AD26CB /* WeiboHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F42F2178414D400AD26CB /* WeiboHTTP.m */; };
 		FA7F42F517841D5100AD26CB /* back-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42F417841D5100AD26CB /* back-btn.png */; };
-		FA80728918BB36D100017C6E /* navbar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FA80728718BB36D100017C6E /* navbar-bg.png */; };
-		FA80728A18BB36D100017C6E /* navbar-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA80728818BB36D100017C6E /* navbar-bg@2x.png */; };
 		FADB6B9717AF53C000337FE4 /* weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = FADB6B9517AF53C000337FE4 /* weixin.png */; };
 		FADB6B9817AF53C000337FE4 /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FADB6B9617AF53C000337FE4 /* weixin@2x.png */; };
 		FAE0CC2B17BDB14E000FF334 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE0CC2A17BDB14E000FF334 /* empty.png */; };
@@ -82,7 +82,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		224510D91A00805300461F11 /* AddPieceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPieceController.h; sourceTree = "<group>"; };
+		224510DA1A00805300461F11 /* AddPieceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPieceController.m; sourceTree = "<group>"; };
 		2252D71F19FCE4FB00E080E6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		2267EE121A06081E00DF761C /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		FA231B3617D064F700B9C5C8 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		FA231B3717D064F700B9C5C8 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		FA25E607178A831B00423752 /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaf.png; sourceTree = "<group>"; };
@@ -158,8 +162,6 @@
 		FA7F42F1178414D300AD26CB /* WeiboHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboHTTP.h; sourceTree = "<group>"; };
 		FA7F42F2178414D400AD26CB /* WeiboHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboHTTP.m; sourceTree = "<group>"; };
 		FA7F42F417841D5100AD26CB /* back-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-btn.png"; sourceTree = "<group>"; };
-		FA80728718BB36D100017C6E /* navbar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-bg.png"; sourceTree = "<group>"; };
-		FA80728818BB36D100017C6E /* navbar-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-bg@2x.png"; sourceTree = "<group>"; };
 		FADB6B9517AF53C000337FE4 /* weixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixin.png; sourceTree = "<group>"; };
 		FADB6B9617AF53C000337FE4 /* weixin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weixin@2x.png"; sourceTree = "<group>"; };
 		FAE0CC2A17BDB14E000FF334 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
@@ -200,6 +202,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2267EE111A0607F700DF761C /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2267EE121A06081E00DF761C /* UIPlaceHolderTextView.h */,
+				2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */,
+			);
+			name = widgets;
+			sourceTree = "<group>";
+		};
 		FA25E611178A9B4700423752 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,8 +328,6 @@
 		FAC965C51782AC00009CB3B1 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				FA80728718BB36D100017C6E /* navbar-bg.png */,
-				FA80728818BB36D100017C6E /* navbar-bg@2x.png */,
 				FA5B703518BB13B5006D27E9 /* refresh.png */,
 				FA5B703618BB13B5006D27E9 /* refresh@2x.png */,
 				FA25E60D178A864C00423752 /* love.png */,
@@ -383,6 +392,7 @@
 		FAE9B0CF17698F92007BC364 /* Huixiang */ = {
 			isa = PBXGroup;
 			children = (
+				2267EE111A0607F700DF761C /* widgets */,
 				FA908AED17AF357C00BF4135 /* weixin */,
 				FA29CACE1786A63D00452B91 /* ui */,
 				FA2AA8D117854056000D63FC /* iap */,
@@ -414,6 +424,8 @@
 				FA51334E1782B1B00072FC1A /* iCarousel */,
 				FAE9B0D017698F92007BC364 /* Supporting Files */,
 				2252D71F19FCE4FB00E080E6 /* Constants.h */,
+				224510D91A00805300461F11 /* AddPieceController.h */,
+				224510DA1A00805300461F11 /* AddPieceController.m */,
 			);
 			path = Huixiang;
 			sourceTree = "<group>";
@@ -501,7 +513,6 @@
 				FA7F428D1783BB5C00AD26CB /* main.png in Resources */,
 				FA7F428E1783BB5C00AD26CB /* main@2x.png in Resources */,
 				FA7F42971783BC7F00AD26CB /* SVProgressHUD.bundle in Resources */,
-				FA80728A18BB36D100017C6E /* navbar-bg@2x.png in Resources */,
 				FA7F429D1783C46D00AD26CB /* tab.png in Resources */,
 				FA7F429E1783C46D00AD26CB /* tab@2x.png in Resources */,
 				FA7F42C71783DFFF00AD26CB /* email.png in Resources */,
@@ -512,7 +523,6 @@
 				FA5B703818BB13B5006D27E9 /* refresh@2x.png in Resources */,
 				FA7F42E81784112B00AD26CB /* weibo.png in Resources */,
 				FA7F42EF178413F900AD26CB /* fav.png in Resources */,
-				FA80728918BB36D100017C6E /* navbar-bg.png in Resources */,
 				FA7F42F0178413F900AD26CB /* fav@2x.png in Resources */,
 				FA7F42F517841D5100AD26CB /* back-btn.png in Resources */,
 				FA2AA8D9178551C8000D63FC /* icon.png in Resources */,
@@ -558,7 +568,9 @@
 				FA7F42E1178406A100AD26CB /* Settings.m in Sources */,
 				FA7F42E417840E0100AD26CB /* SettingsViewController.m in Sources */,
 				FA7F42F3178414D500AD26CB /* WeiboHTTP.m in Sources */,
+				224510DB1A00805300461F11 /* AddPieceController.m in Sources */,
 				FA2AA8D417854075000D63FC /* IAPHelper.m in Sources */,
+				2267EE141A06081E00DF761C /* UIPlaceHolderTextView.m in Sources */,
 				FA2AA8D7178540F8000D63FC /* HuixiangIAPHelper.m in Sources */,
 				FAEC39B0178570D50089E61E /* InsetsLabel.m in Sources */,
 				FA29CAD11786A66900452B91 /* UIHelper.m in Sources */,

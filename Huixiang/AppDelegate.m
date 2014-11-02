@@ -14,19 +14,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // 设置背景色
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:60/255.0f green:58/255.0f blue:55/255.0f alpha:1.0f ]];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-       
-     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor colorWithRed:255.0/255.0 green:245.0/255.0 blue:255.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
-                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:22.0], NSFontAttributeName, nil]];
-
-
     
-    // Override point for customization after application launch.
+    UIImage* img = [UIImage imageNamed:@"navbar"];
+    [[UINavigationBar appearance] setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+  
+    // 字体前景色以及大小
+    UIColor* color = [UIColor colorWithRed:255.0/255.0 green:245.0/255.0 blue:255.0/255.0 alpha:1.0];
+    UIFont* font = [UIFont boldSystemFontOfSize:24];
+    NSDictionary* attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+                           color, NSForegroundColorAttributeName,
+                           font, NSFontAttributeName, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes: attrs];
+    
+    // 设置文字纵向偏移
+    CGFloat verticalOffset = 2;
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:verticalOffset forBarMetrics:UIBarMetricsDefault];
+    
+    // 状态栏浅色
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // tab栏背景色
     UIImage* tabBarBackground = [UIImage imageNamed:@"tab.png"];
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    
+    // 选中时的背景
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"empty.png"]];
 
     [HuixiangIAPHelper sharedInstance];
@@ -34,20 +49,27 @@
     return YES;
 }
 
+
+// 从外部跳转回来
 -(BOOL)application:(UIApplication *) application handleOpenURL:(NSURL *)url
 {
+    // 来自微信
     return [WXApi handleOpenURL:url delegate:self];
 }
 
+// 跳转外部应用
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    // 跳转至微信
     return [WXApi handleOpenURL:url delegate:self];
 }
+
 
 -(void) onReq:(BaseReq*)req
 {
     
 }
+
 
 -(void) onResp:(BaseResp*)resp
 {

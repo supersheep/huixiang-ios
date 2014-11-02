@@ -129,10 +129,7 @@ alertViewType;
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.translucent=NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar-bg@2x.png"] forBarPosition:UIBarPositionTop barMetrics:UIBarMetricsDefault];
     
-
-  
 }
 
 
@@ -170,31 +167,9 @@ alertViewType;
         if(buttonIndex==1){
             [self performSegueWithIdentifier:@"auth" sender:nil];
         }
-    }else if(alertView.tag==alertViewTypeShareInput){
-        if(buttonIndex==1){
-            UITextField *commentField = [alertView textFieldAtIndex:0];
-            if(commentField.text.length==0){
-                [self showInput];
-            }else{
-                [self sharePiece:commentField.text];
-            }
-        }
     }
 }
 
--(void)sharePiece:(NSString*) content
-{
-    NSDictionary* user=[Settings getUser];
-    [SVProgressHUD showWithStatus:@"发送"];
-    [HTTP sendRequestToPath:@"/add" method:@"POST" params:@{@"content":content,@"share":@""} cookies:@{@"cu":user[@"client_hash"]} completionHandler:^(id data) {
-        if(data){
-            [SVProgressHUD showSuccessWithStatus:@"成功"];
-
-        }else{
-            [SVProgressHUD showErrorWithStatus:@"失败"];
-        }
-    }];
-}
 
 -(void)addToFav
 {
@@ -262,16 +237,7 @@ alertViewType;
         [self performSegueWithIdentifier:@"auth" sender:nil];
         return;
     }
-    [self showInput];
-}
-
--(void)showInput
-{
-    UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"记一句:" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"发送",nil];
-    alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
-    alertView.tag=alertViewTypeShareInput;
-    [alertView show];
-
+    [self performSegueWithIdentifier:@"addPiece" sender:sender];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -333,6 +299,12 @@ alertViewType;
 
   	return view;
     
+}
+
+- (IBAction)finishAddPiece:(UIStoryboardSegue *)segue
+{
+    // 取消或成功都会返回这里，目前不做任何处理
+    NSLog(@"finish add piece");
 }
 
 -(void)didSwipe
