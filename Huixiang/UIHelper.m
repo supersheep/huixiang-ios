@@ -14,4 +14,18 @@
     CGSize mTempSize = [text sizeWithFont:font constrainedToSize:constrainedToSize lineBreakMode:UILineBreakModeWordWrap];
     return mTempSize;
 }
+
+
++(void)setUpTabBar:(UIViewController *)vc withImageName:(NSString *)name andTitle:(NSString *)title
+{
+        if(vc){
+            vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:nil tag:0];
+            [vc.tabBarItem setImage:[UIImage imageNamed:name]];
+            [vc.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                   [UIColor colorWithRed:150.0f/255.0f green:150.0f/255.0f blue:150.0f/255.0f alpha:1.0f], UITextAttributeTextColor,
+                                                   nil] forState:UIControlStateNormal];
+        }
+    
+    
+}
 @end

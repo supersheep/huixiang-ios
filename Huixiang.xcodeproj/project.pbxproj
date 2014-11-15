@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2230E2C61A13A9DD00D64854 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2230E2C51A13A9DD00D64854 /* libz.dylib */; };
 		224510DB1A00805300461F11 /* AddPieceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224510DA1A00805300461F11 /* AddPieceController.m */; };
 		2267EE141A06081E00DF761C /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */; };
+		2299A7FC1A172D9B000E401E /* typicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2299A7FB1A172D9B000E401E /* typicons.ttf */; };
+		7DDC4433F2358D4A0C352CB7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042BB21E7418BEF19DEDE2CA /* libPods.a */; };
 		FA231B3817D064F700B9C5C8 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA231B3717D064F700B9C5C8 /* UIView+Genie.m */; };
 		FA231B3917D06AA400B9C5C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9B0E517698F92007BC364 /* ViewController.m */; };
 		FA25E609178A831B00423752 /* leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25E607178A831B00423752 /* leaf.png */; };
@@ -38,8 +41,6 @@
 		FA5B703C18BB17AD006D27E9 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5B703B18BB17AD006D27E9 /* icon-120.png */; };
 		FA7F42811783BAB100AD26CB /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F427F1783BAB100AD26CB /* favorites.png */; };
 		FA7F42821783BAB100AD26CB /* favorites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42801783BAB100AD26CB /* favorites@2x.png */; };
-		FA7F42851783BAC200AD26CB /* heartAction.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42831783BAC200AD26CB /* heartAction.png */; };
-		FA7F42861783BAC200AD26CB /* heartAction@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42841783BAC200AD26CB /* heartAction@2x.png */; };
 		FA7F42891783BAD100AD26CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42871783BAD100AD26CB /* settings.png */; };
 		FA7F428A1783BAD100AD26CB /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F42881783BAD100AD26CB /* settings@2x.png */; };
 		FA7F428D1783BB5C00AD26CB /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F428B1783BB5C00AD26CB /* main.png */; };
@@ -82,11 +83,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042BB21E7418BEF19DEDE2CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B2D5EB81E947E605351043 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2230E2C51A13A9DD00D64854 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		224510D91A00805300461F11 /* AddPieceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPieceController.h; sourceTree = "<group>"; };
 		224510DA1A00805300461F11 /* AddPieceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPieceController.m; sourceTree = "<group>"; };
 		2252D71F19FCE4FB00E080E6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2267EE121A06081E00DF761C /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		2299A7FB1A172D9B000E401E /* typicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = typicons.ttf; sourceTree = "<group>"; };
+		A072D1779EC47A29C2FB11E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FA231B3617D064F700B9C5C8 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		FA231B3717D064F700B9C5C8 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		FA25E607178A831B00423752 /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaf.png; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2230E2C61A13A9DD00D64854 /* libz.dylib in Frameworks */,
 				FA5B703418BAEBD9006D27E9 /* libWeChatSDK.a in Frameworks */,
 				FA2AA8D017854040000D63FC /* StoreKit.framework in Frameworks */,
 				FA7F42A61783CB6A00AD26CB /* MessageUI.framework in Frameworks */,
@@ -196,6 +203,7 @@
 				FAE9B0CA17698F92007BC364 /* UIKit.framework in Frameworks */,
 				FAE9B0CC17698F92007BC364 /* Foundation.framework in Frameworks */,
 				FAE9B0CE17698F92007BC364 /* CoreGraphics.framework in Frameworks */,
+				7DDC4433F2358D4A0C352CB7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +217,15 @@
 				2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */,
 			);
 			name = widgets;
+			sourceTree = "<group>";
+		};
+		5A8570719A0D1A270CAFF411 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A072D1779EC47A29C2FB11E0 /* Pods.debug.xcconfig */,
+				05B2D5EB81E947E605351043 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		FA25E611178A9B4700423752 /* fonts */ = {
@@ -368,6 +385,7 @@
 				FAE9B0CF17698F92007BC364 /* Huixiang */,
 				FAE9B0C817698F92007BC364 /* Frameworks */,
 				FAE9B0C717698F92007BC364 /* Products */,
+				5A8570719A0D1A270CAFF411 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -382,9 +400,11 @@
 		FAE9B0C817698F92007BC364 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2230E2C51A13A9DD00D64854 /* libz.dylib */,
 				FAE9B0C917698F92007BC364 /* UIKit.framework */,
 				FAE9B0CB17698F92007BC364 /* Foundation.framework */,
 				FAE9B0CD17698F92007BC364 /* CoreGraphics.framework */,
+				042BB21E7418BEF19DEDE2CA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -392,6 +412,7 @@
 		FAE9B0CF17698F92007BC364 /* Huixiang */ = {
 			isa = PBXGroup;
 			children = (
+				2299A7FB1A172D9B000E401E /* typicons.ttf */,
 				2267EE111A0607F700DF761C /* widgets */,
 				FA908AED17AF357C00BF4135 /* weixin */,
 				FA29CACE1786A63D00452B91 /* ui */,
@@ -451,9 +472,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE9B0E917698F92007BC364 /* Build configuration list for PBXNativeTarget "Huixiang" */;
 			buildPhases = (
+				5F0209C68F9A8D3D6620F696 /* Check Pods Manifest.lock */,
 				FAE9B0C217698F92007BC364 /* Sources */,
 				FAE9B0C317698F92007BC364 /* Frameworks */,
 				FAE9B0C417698F92007BC364 /* Resources */,
+				AC1EAC3781E7E1BC5BC4ED29 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -505,8 +528,7 @@
 				FA5133551782B3650072FC1A /* PieceView.xib in Resources */,
 				FA7F42811783BAB100AD26CB /* favorites.png in Resources */,
 				FA7F42821783BAB100AD26CB /* favorites@2x.png in Resources */,
-				FA7F42851783BAC200AD26CB /* heartAction.png in Resources */,
-				FA7F42861783BAC200AD26CB /* heartAction@2x.png in Resources */,
+				2299A7FC1A172D9B000E401E /* typicons.ttf in Resources */,
 				FA7F42891783BAD100AD26CB /* settings.png in Resources */,
 				FA5B703C18BB17AD006D27E9 /* icon-120.png in Resources */,
 				FA7F428A1783BAD100AD26CB /* settings@2x.png in Resources */,
@@ -546,6 +568,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F0209C68F9A8D3D6620F696 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC1EAC3781E7E1BC5BC4ED29 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAE9B0C217698F92007BC364 /* Sources */ = {
@@ -662,6 +717,7 @@
 		};
 		FAE9B0EA17698F92007BC364 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A072D1779EC47A29C2FB11E0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -682,6 +738,7 @@
 		};
 		FAE9B0EB17698F92007BC364 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05B2D5EB81E947E605351043 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

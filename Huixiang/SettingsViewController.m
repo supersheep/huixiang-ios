@@ -13,6 +13,7 @@
 #import "HuixiangIAPHelper.h"
 #import <StoreKit/StoreKit.h>
 #import "SVProgressHUD.h"
+#import "UIHelper.h"
 
 @interface SettingsViewController ()<MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *productLabel;
@@ -24,22 +25,16 @@
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
-
-
     self=[super initWithCoder:aDecoder];
-    if(self){
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置" image:nil tag:0];
-        [self.tabBarItem setImage:[UIImage imageNamed:@"settings.png"]];
-        [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                   [UIColor colorWithRed:150.0f/255.0f green:150.0f/255.0f blue:150.0f/255.0f alpha:1.0f], UITextAttributeTextColor,
-                                                   nil] forState:UIControlStateNormal];
-    }
+    [UIHelper setUpTabBar:self withImageName:@"settings" andTitle:@"设置"];
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.translucent=NO;

@@ -34,14 +34,8 @@
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
-    self=[super initWithCoder:aDecoder];
-    if(self){
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"收藏" image:nil tag:0];
-        [self.tabBarItem setImage:[UIImage imageNamed:@"love.png"]];
-        [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                   [UIColor colorWithRed:150.0f/255.0f green:150.0f/255.0f blue:150.0f/255.0f alpha:1.0f], UITextAttributeTextColor,
-                                                   nil] forState:UIControlStateNormal];
-    }
+    self = [super initWithCoder:aDecoder];
+    [UIHelper setUpTabBar:self withImageName:@"love" andTitle:@"收藏"];
     return self;
 }
 

@@ -81,7 +81,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>ui</key>
-	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>typeicons.ttf</string>
+	</array>
 </dict>
 </plist>

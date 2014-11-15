@@ -10,4 +10,5 @@
 
 @interface UIHelper : NSObject
 +(CGSize)measureTextHeight:(NSString*)text UIFont:font constrainedToSize:(CGSize)constrainedToSize;
++(void)setUpTabBar:(UIViewController *)vc withImageName:(NSString *)name andTitle:(NSString *)title;
 @end

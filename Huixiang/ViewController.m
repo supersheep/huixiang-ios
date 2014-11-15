@@ -17,6 +17,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WXApi.h"
 #import "UIView+Genie.h"
+#import "UIHelper.h"
 
 #define NUMBER_OF_VISIBLE_ITEMS 1
 #define ITEM_SPACING 130.0f
@@ -39,23 +40,23 @@ alertViewType;
 @end
 
 @implementation ViewController
+@synthesize write;
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     self=[super initWithCoder:aDecoder];
-    if(self){
-        [super viewDidLoad];
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"看看" image:nil tag:0];
-        UIImage* leaf = [UIImage imageNamed:@"leaf.png"];
-        
-        [self.tabBarItem setImage:leaf];
-        [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                   [UIColor colorWithRed:150.0f/255.0f green:150.0f/255.0f blue:150.0f/255.0f alpha:1.0f], UITextAttributeTextColor,
-                                                   nil] forState:UIControlStateNormal];
-        [self.tabBarController setSelectedIndex:0];
-
-    }
+    [UIHelper setUpTabBar:self withImageName:@"leaf" andTitle:@"看看"];
     return self;
+}
+
+-(void)setWriteButton
+{
+    UIFont* font = [UIFont fontWithName:@"Typicons" size:26.0];
+    NSDictionary* attrs = @{NSFontAttributeName:font};
+    
+    [write setTintColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1]];
+    [write setTitleTextAttributes:attrs forState:UIControlStateNormal];
+    [write setTitle:@"\ue0c2"];
 }
 
 -(void)initSideView
@@ -117,6 +118,7 @@ alertViewType;
 
 - (void)viewDidLoad
 {
+    [self setWriteButton];
    
     [self initSideView];
 
@@ -129,7 +131,6 @@ alertViewType;
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.translucent=NO;
-    
 }
 
 
