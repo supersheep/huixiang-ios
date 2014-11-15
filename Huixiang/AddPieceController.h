@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "UIPlaceHolderTextView.h"
 
-@interface AddPieceController : UIViewController<UIBarPositioningDelegate>
+@interface AddPieceController : UIViewController<UIBarPositioningDelegate,UITextViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UIPlaceHolderTextView *writingTextfield;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
 @property (nonatomic, weak) IBOutlet UIButton *imageUploadButton;
+@property (weak, nonatomic) IBOutlet UILabel *textCounter;
 @end

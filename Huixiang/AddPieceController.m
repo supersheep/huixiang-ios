@@ -12,21 +12,48 @@
 #import "HTTP.h"
 #import <QiniuSDK.h>
 
+#define MAX_LENGTH 250;
 @implementation AddPieceController
 
 @synthesize writingTextfield;
 @synthesize imageUploadButton;
 @synthesize back;
+@synthesize textCounter;
 
 - (void)viewDidLoad{
     
     [writingTextfield becomeFirstResponder];
+    writingTextfield.delegate = self;
     
     UIFont* font = [UIFont fontWithName:@"Typicons" size:26.0];
     NSDictionary* attrs = @{NSFontAttributeName:font};
     
     [back setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [back setTitle:@"\ue006"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fillCounterLabel:) name:UITextViewTextDidChangeNotification object:writingTextfield];
+    
+    [self fillCounterLabel:nil];
+}
+
+
+#pragma textView Functions
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    int maxLength = MAX_LENGTH;
+    if([[writingTextfield text] length] < maxLength){
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+-(void)fillCounterLabel:(NSNotification *)notification{
+    int maxLength = MAX_LENGTH;
+    NSUInteger length = [[writingTextfield text] length];
+    NSString* countText = [@(length) stringValue];
+    countText = [countText stringByAppendingString:@" / "];
+    countText = [countText stringByAppendingString:[@(maxLength) stringValue]];
+    [textCounter setText:countText];
 }
 
 

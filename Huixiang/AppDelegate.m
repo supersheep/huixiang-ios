@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    // 设置背景色
+    // 设置头部背景色
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:60/255.0f green:58/255.0f blue:55/255.0f alpha:1.0f ]];
     
     
