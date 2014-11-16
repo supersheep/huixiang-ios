@@ -20,6 +20,7 @@
 >
 
 @property (nonatomic, retain) IBOutlet UIPlaceHolderTextView *writingTextfield;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
 @property (nonatomic, weak) IBOutlet UIButton *imageUploadButton;
 @property (weak, nonatomic) IBOutlet UILabel *textCounter;

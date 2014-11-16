@@ -44,8 +44,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fillCounterLabel:) name:UITextViewTextDidChangeNotification object:writingTextfield];
     
     [self fillCounterLabel:nil];
-    
-    [self performSelector:@selector(pickFromAlbum) withObject:nil afterDelay:3.0];
 }
 
 
@@ -136,6 +134,9 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [UIHelper setupHeader];
+    
+    UIImage* image = [info objectForKey: @"UIImagePickerControllerOriginalImage"];
+    _imageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
