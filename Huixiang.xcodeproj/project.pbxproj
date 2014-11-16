@@ -11,6 +11,8 @@
 		224510DB1A00805300461F11 /* AddPieceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224510DA1A00805300461F11 /* AddPieceController.m */; };
 		2267EE141A06081E00DF761C /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */; };
 		2299A7FC1A172D9B000E401E /* typicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2299A7FB1A172D9B000E401E /* typicons.ttf */; };
+		22FB3DB31A177B19002F3F64 /* HXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB3DB11A177B19002F3F64 /* HXAlertView.m */; };
+		22FB3DB41A177B19002F3F64 /* HXAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FB3DB21A177B19002F3F64 /* HXAlertView.xib */; };
 		7DDC4433F2358D4A0C352CB7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042BB21E7418BEF19DEDE2CA /* libPods.a */; };
 		FA231B3817D064F700B9C5C8 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA231B3717D064F700B9C5C8 /* UIView+Genie.m */; };
 		FA231B3917D06AA400B9C5C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9B0E517698F92007BC364 /* ViewController.m */; };
@@ -92,6 +94,9 @@
 		2267EE121A06081E00DF761C /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		2299A7FB1A172D9B000E401E /* typicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = typicons.ttf; sourceTree = "<group>"; };
+		22FB3DB01A177B19002F3F64 /* HXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAlertView.h; sourceTree = "<group>"; };
+		22FB3DB11A177B19002F3F64 /* HXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAlertView.m; sourceTree = "<group>"; };
+		22FB3DB21A177B19002F3F64 /* HXAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXAlertView.xib; sourceTree = "<group>"; };
 		A072D1779EC47A29C2FB11E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FA231B3617D064F700B9C5C8 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		FA231B3717D064F700B9C5C8 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
@@ -215,6 +220,9 @@
 			children = (
 				2267EE121A06081E00DF761C /* UIPlaceHolderTextView.h */,
 				2267EE131A06081E00DF761C /* UIPlaceHolderTextView.m */,
+				22FB3DB01A177B19002F3F64 /* HXAlertView.h */,
+				22FB3DB11A177B19002F3F64 /* HXAlertView.m */,
+				22FB3DB21A177B19002F3F64 /* HXAlertView.xib */,
 			);
 			name = widgets;
 			sourceTree = "<group>";
@@ -538,6 +546,7 @@
 				FA7F429D1783C46D00AD26CB /* tab.png in Resources */,
 				FA7F429E1783C46D00AD26CB /* tab@2x.png in Resources */,
 				FA7F42C71783DFFF00AD26CB /* email.png in Resources */,
+				22FB3DB41A177B19002F3F64 /* HXAlertView.xib in Resources */,
 				FA7F42C81783DFFF00AD26CB /* email@2x.png in Resources */,
 				FA7F42D91783EDFE00AD26CB /* grayArrow.png in Resources */,
 				FA7F42DA1783EDFE00AD26CB /* grayArrow@2x.png in Resources */,
@@ -608,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA231B3917D06AA400B9C5C8 /* ViewController.m in Sources */,
+				22FB3DB31A177B19002F3F64 /* HXAlertView.m in Sources */,
 				FAE9B0D617698F92007BC364 /* main.m in Sources */,
 				FAE9B0DA17698F92007BC364 /* AppDelegate.m in Sources */,
 				FAE9B0EE17698FF4007BC364 /* HTTP.m in Sources */,

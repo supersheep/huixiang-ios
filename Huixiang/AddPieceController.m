@@ -12,13 +12,21 @@
 #import "HTTP.h"
 #import <QiniuSDK.h>
 
-#define MAX_LENGTH 250;
+#define MIN_LENGTH 5;
+#define MAX_LENGTH 240;
+
+
+@interface AddPieceController()
+@property (nonatomic, strong) UIAlertView* alert;
+@end
+
 @implementation AddPieceController
 
 @synthesize writingTextfield;
 @synthesize imageUploadButton;
 @synthesize back;
 @synthesize textCounter;
+
 
 - (void)viewDidLoad{
     
@@ -37,15 +45,18 @@
 }
 
 
-#pragma textView Functions
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    int maxLength = MAX_LENGTH;
-    if([[writingTextfield text] length] < maxLength){
-        return YES;
-    }else{
-        return NO;
-    }
+-(void) showAlertWithTitle:(NSString*)title andMessage:(NSString*)message{
+    _alert = [[UIAlertView alloc] init];
+    [_alert setDelegate:self];
+    [_alert setTitle:title];
+    [_alert setMessage:message];
+    [_alert addButtonWithTitle:@"好的"];
+    [_alert show];
+    
+    [self.view endEditing:YES];
+    [self.view becomeFirstResponder];
 }
+
 
 -(void)fillCounterLabel:(NSNotification *)notification{
     int maxLength = MAX_LENGTH;
@@ -87,15 +98,28 @@
 -(void)sharePiece:(NSString*) content
 {
     NSDictionary* user=[Settings getUser];
+    int maxLength = MAX_LENGTH;
+    int minLength = MIN_LENGTH;
+    int currentLength = [[writingTextfield text] length];
+    if(currentLength < minLength){
+        [self showAlertWithTitle:@"太简短咯" andMessage:@"\n至少5个字"];
+        return;
+    }
+    if(currentLength > maxLength){
+        [self showAlertWithTitle:@"超出长度限制" andMessage:@"\n已经有很多地方可以用来讲故事咯 :)"];
+        return;
+    }
+    
     [SVProgressHUD showWithStatus:@"发送"];
+    
     [HTTP sendRequestToPath:@"/add" method:@"POST" params:@{@"content":content,@"share":@""} cookies:@{@"cu":user[@"client_hash"]} completionHandler:^(id data) {
         if(data){
             [SVProgressHUD showSuccessWithStatus:@"成功"];
+            [self performSegueWithIdentifier:@"backToHome" sender:self];
         }else{
             [SVProgressHUD showErrorWithStatus:@"失败"];
         }
         
-        [self performSegueWithIdentifier:@"backToHome" sender:self];
     }];
 }
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HXAlertView">
+            <connections>
+                <outlet property="btnCancel" destination="mTm-75-ghZ" id="eMd-lP-lWK"/>
+                <outlet property="btnOk" destination="y1K-KL-UZA" id="JRx-8e-DsG"/>
+                <outlet property="flexSpace" destination="N23-KF-Nzx" id="E4d-4R-qGS"/>
+                <outlet property="lblMessage" destination="adX-nn-LBZ" id="152-et-qfq"/>
+                <outlet property="toolbar" destination="6yM-Hu-cU5" id="sO6-1U-iSf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMessage" destination="WeG-cx-Y9i" id="8Bt-dM-oTd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeG-cx-Y9i">
+                    <rect key="frame" x="10" y="0.0" width="300" height="180"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yM-Hu-cU5">
+                            <rect key="frame" x="0.0" y="138" width="300" height="44"/>
+                            <items>
+                                <barButtonItem title="Cancel" id="mTm-75-ghZ">
+                                    <connections>
+                                        <action selector="btnCancelTap:" destination="-1" id="Obn-DX-Mee"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="N23-KF-Nzx"/>
+                                <barButtonItem title="Ok" id="y1K-KL-UZA">
+                                    <connections>
+                                        <action selector="btnOkTap:" destination="-1" id="RUg-vM-ZvB"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adX-nn-LBZ">
+                            <rect key="frame" x="132" y="70" width="40" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="7" y="71"/>
+        </view>
+    </objects>
+</document>

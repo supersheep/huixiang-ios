@@ -127,8 +127,26 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <view contentMode="scaleToFill" id="DN5-he-cKP">
+                                        <rect key="frame" x="243" y="0.0" width="52" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="csP-qZ-XCT">
+                                                <rect key="frame" x="11" y="4" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="好了">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendContent:" destination="twP-bF-QhM" eventType="touchUpInside" id="pWG-q7-evP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.38039215686274508" green="0.33333333333333331" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.23529411764705882" green="0.22745098039215686" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.22745098039215686" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/250" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SbG-ek-lfW">
                                 <rect key="frame" x="218" y="206" width="86" height="14"/>
@@ -261,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDn-cQ-iSM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1701" y="601"/>
+            <point key="canvasLocation" x="-1686" y="635"/>
         </scene>
         <!--授权-->
         <scene sceneID="7iU-vX-la4">
@@ -525,7 +543,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rM-wO-uzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2227" y="1296"/>
+            <point key="canvasLocation" x="-2261" y="1296"/>
         </scene>
         <!--收藏-->
         <scene sceneID="bWb-pn-5ok">
@@ -558,6 +576,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IUF-si-TA2"/>
+        <segue reference="CHR-eI-3Cj"/>
     </inferredMetricsTieBreakers>
 </document>

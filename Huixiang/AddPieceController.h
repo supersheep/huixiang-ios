@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "UIPlaceHolderTextView.h"
+#import "HXAlertView.h"
 
-@interface AddPieceController : UIViewController<UIBarPositioningDelegate,UITextViewDelegate>
+@interface AddPieceController : UIViewController
+<
+    UIAlertViewDelegate,
+    UIBarPositioningDelegate,
+    UITextViewDelegate
+>
 
 @property (nonatomic, retain) IBOutlet UIPlaceHolderTextView *writingTextfield;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
