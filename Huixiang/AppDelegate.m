@@ -9,33 +9,15 @@
 #import "AppDelegate.h"
 #import "HuixiangIAPHelper.h"
 #import "SVProgressHUD.h"
+#import "UIHelper.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    // 设置头部背景色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:60/255.0f green:58/255.0f blue:55/255.0f alpha:1.0f ]];
-    
-    
-    UIImage* img = [UIImage imageNamed:@"navbar"];
-    [[UINavigationBar appearance] setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-  
-    // 字体前景色以及大小
-    UIColor* color = [UIColor colorWithRed:255.0/255.0 green:245.0/255.0 blue:255.0/255.0 alpha:1.0];
-    UIFont* font = [UIFont boldSystemFontOfSize:24];
-    NSDictionary* attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                           color, NSForegroundColorAttributeName,
-                           font, NSFontAttributeName, nil];
-    [[UINavigationBar appearance] setTitleTextAttributes: attrs];
-    
-    // 设置文字纵向偏移
-    CGFloat verticalOffset = 2;
-    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:verticalOffset forBarMetrics:UIBarMetricsDefault];
-    
-    // 状态栏浅色
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    // 设置头部背景图
+    [UIHelper setupHeader];
     
     // tab栏背景色
     UIImage* tabBarBackground = [UIImage imageNamed:@"tab.png"];

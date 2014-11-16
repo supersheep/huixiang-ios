@@ -10,6 +10,7 @@
 #import "Settings.h"
 #import "SVProgressHUD.h"
 #import "HTTP.h"
+#import "UIHelper.h"
 #import <QiniuSDK.h>
 
 #define MIN_LENGTH 5;
@@ -18,6 +19,7 @@
 
 @interface AddPieceController()
 @property (nonatomic, strong) UIAlertView* alert;
+@property (nonatomic, strong) UIActionSheet* actions;
 @end
 
 @implementation AddPieceController
@@ -42,6 +44,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fillCounterLabel:) name:UITextViewTextDidChangeNotification object:writingTextfield];
     
     [self fillCounterLabel:nil];
+    
+    [self performSelector:@selector(pickFromAlbum) withObject:nil afterDelay:3.0];
 }
 
 
@@ -81,18 +85,75 @@
     }];
 }
 
-- (IBAction)uploadImage:(id)sender {
+- (IBAction)addImage:(id)sender {
     
-    [self geTokenWith: ^(NSString* fileName, NSString* token){
-            QNUploadManager *upManager = [[QNUploadManager alloc] init];
-            NSData *data = [@"Hello, World!" dataUsingEncoding : NSUTF8StringEncoding];
-            [upManager putData:data key:@"hello" token:token
-                      complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-                          NSLog(@"%@", info);
-                          NSLog(@"%@", resp);
-                      } option:nil];
-    }];
+    _actions = [[UIActionSheet alloc] init];
+    
+    
+    [_actions addButtonWithTitle:@"拍一张"];
+    [_actions addButtonWithTitle:@"从相册选择"];
+    [_actions addButtonWithTitle:@"取消"];
+    [_actions setCancelButtonIndex:2];
+    [_actions setDelegate:self];
+    [_actions showInView:self.view];
+}
 
+- (void)navigationController:(UINavigationController *)navigationController
+      willShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animated {
+    
+    if ([navigationController isKindOfClass:[UIImagePickerController class]]) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+        [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    }
+}
+
+-(void)pickFromAlbum{
+    
+    UIImagePickerController *photoPicker = [[UIImagePickerController alloc] init];
+    photoPicker.delegate = self;
+    photoPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    photoPicker.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    photoPicker.navigationBar.tintColor = [UIColor whiteColor];
+    photoPicker.navigationBar.translucent = NO;
+    [self presentViewController:photoPicker animated:YES completion:NULL];
+    
+}
+
+-(void)photoFromCamera
+{
+    UIImagePickerController *photoPicker = [[UIImagePickerController alloc] init];
+    
+    photoPicker.delegate = self;
+    photoPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    UIImage* img = [UIImage imageNamed:@"navbar"];
+    [photoPicker.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    
+    
+    [self presentViewController:photoPicker animated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    [UIHelper setupHeader];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+    [UIHelper setupHeader];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 0){
+        NSLog(@"还没做");
+    }else if(buttonIndex == 1){
+        [self pickFromAlbum];
+    }else{
+        NSLog(@"cancel");
+    }
 }
 
 -(void)sharePiece:(NSString*) content

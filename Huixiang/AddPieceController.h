@@ -12,6 +12,8 @@
 
 @interface AddPieceController : UIViewController
 <
+    UIActionSheetDelegate,
+    UIImagePickerControllerDelegate,
     UIAlertViewDelegate,
     UIBarPositioningDelegate,
     UITextViewDelegate
